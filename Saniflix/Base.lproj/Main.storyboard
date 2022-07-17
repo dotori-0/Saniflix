@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tpf-1y-JL6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bh7-8O-bh1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.579710144927539" y="64.955357142857139"/>
+            <point key="canvasLocation" x="950.72463768115949" y="64.955357142857139"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="B1h-nX-eW7">
@@ -228,6 +228,16 @@
                                 <rect key="frame" x="311" y="542" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-4f-CLZ">
+                                <rect key="frame" x="182" y="610" width="176" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입 완료 테스트 버튼"/>
+                                <connections>
+                                    <action selector="signUpCompleteButtonClicked:" destination="Tpf-1y-JL6" eventType="touchUpInside" id="CD4-dC-A4H"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="28y-Gh-XbZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vk7-SH-rt3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,6 +246,7 @@
                             <outletCollection property="gestureRecognizers" destination="SVJ-iO-oux" appends="YES" id="eoX-2M-aul"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="dHi-fz-3q7"/>
                     <connections>
                         <outlet property="emailTextField" destination="xvP-nJ-8FJ" id="dnl-mj-hy5"/>
                         <outlet property="locationTextField" destination="ZaD-Cd-QJh" id="8Rr-xa-O0I"/>
@@ -253,14 +264,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-662" y="65"/>
+            <point key="canvasLocation" x="162" y="65"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WK3-r8-VXJ">
             <objects>
                 <viewController id="Ojw-G2-sY9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xuI-pD-yer">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력해 주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zl-cy-c4x">
@@ -313,7 +324,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKi-4Q-Ckm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750.72463768115949" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1660.8695652173915" y="64.955357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ilT-rP-kg9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bh7-8O-bh1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yfk-fd-w7l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tpf-1y-JL6" kind="relationship" relationship="rootViewController" id="Oy4-CZ-5xX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fX-c0-IPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-662.31884057971024" y="64.955357142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

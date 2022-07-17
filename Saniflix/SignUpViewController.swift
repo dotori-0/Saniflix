@@ -96,12 +96,11 @@ class SignUpViewController: UIViewController {
 
     func isValidPassword(_ userInputPassword: String?) -> Bool {
         if userInputPassword!.count < 6 {
-
-        } else if userInputPassword!.count >= 6 {
+            return false
+//        } else if userInputPassword!.count >= 6 {
+        } else {
             return true
         }
-
-        return false
     }
 
 
@@ -150,6 +149,11 @@ class SignUpViewController: UIViewController {
 
         passwordTextField.text = nil
         print("passwordTextField.text: \(passwordTextField.text)")
+    }
+
+
+    @IBAction func signUpCompleteButtonClicked(_ sender: UIButton) {
+
     }
 
 }
